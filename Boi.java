@@ -36,19 +36,23 @@ public class Boi {
             if (pikseli % 2 == 0) {
                 System.out.println(" Bounty Eliminate Splinter");
                 System.out.println("kolko udara e napravil do momenta");
-                nivoBateriq(hit);//2.2
-                int udar = ThreadLocalRandom.current().nextInt(0, 10);
-                if (udar == 5) {
-                    System.out.println("Cant hit ");
-                } else {
-                    System.out.println("RIP splinter");
-                    talk();
-                    hit++;
-                    bateryChek(hit);
+                nivoBateriq(hit);
+                if (hit < 4) {
+                    int udar = ThreadLocalRandom.current().nextInt(0, 10);
+                    if (udar == 5) {
+                        System.out.println("Cant hit ");
+                    } else {
+                        System.out.println("RIP splinter");
+                        talk();
+                        hit++;
+                        bateryChek(hit);
 
-                }
+                    }
+                } else System.out.println("Splinter ne e otkrit qvno se e skril");
+
             } else {
-                System.out.println("Splinter ne e otkrit qvno se e skril");
+                System.out.println("Nqma tok");
+                shtepsel();
             }
             Scanner duma = new Scanner(System.in);
             System.out.println("Da produlja li da tursq da/ne");
