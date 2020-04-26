@@ -58,7 +58,7 @@ public class Boi {
             System.out.println("Da produlja li da tursq da/ne");
             produljenie = duma.nextLine();
 
-        }while (pikseli%2!=0|| hit<4 || produljenie == "da");
+        }while (pikseli%2!=0 && hit<4 && produljenie == "da");
     }
     public static void nivoBateriq(int shibai ){
 
