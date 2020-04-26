@@ -43,8 +43,9 @@ public class Boi {
                 } else {
                     System.out.println("RIP splinter");
                     talk();
-                    bateryChek(hit);
                     hit++;
+                    bateryChek(hit);
+
                 }
             } else {
                 System.out.println("Splinter ne e otkrit qvno se e skril");
